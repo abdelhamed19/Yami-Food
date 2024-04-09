@@ -1,5 +1,5 @@
 	<!-- Start header -->
-    <x-front-header />
+    <x-front-header title="Reservation" />
     <br>
     <div class="all-page-title page-breadcrumb">
 		<div class="container text-center">

@@ -1,5 +1,5 @@
 	<!-- Start header -->
-    <x-front-header />
+    <x-front-header title="resturant" />
 	<!-- End header -->
 
 	<!-- Start slides -->
@@ -65,9 +65,9 @@
 					<div class="inner-column">
 						<h1>Welcome To <span>Yamifood Restaurant</span></h1>
 						<h4>Little Story</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
-						<p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. Sed aliquam metus lorem, a pellentesque tellus pretium a. Nulla placerat elit in justo vestibulum, et maximus sem pulvinar.</p>
-						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservation</a>
+						<p>YamiFood Restaurant was born out of a passion for exquisite cuisine and a commitment to providing unforgettable dining experiences. Our journey began with a vision to blend culinary artistry with exceptional service, creating a haven for food enthusiasts and connoisseurs alike. </p>
+						<p>Nestled in the heart of [Location], our restaurant captures the essence of [Cuisine Type] cuisine, offering a delightful array of flavors meticulously crafted by our talented chefs. From traditional favorites to innovative creations, each dish is a culinary masterpiece designed to tantalize your taste buds and ignite your senses.</p>
+						<a class="btn btn-lg btn-circle btn-outline-new-white" href="{{ route('reservations.index') }}">Reservation</a>
 					</div>
 				</div>
 			</div>

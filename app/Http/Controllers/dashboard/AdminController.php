@@ -29,7 +29,7 @@ class AdminController extends Controller
     {
         Auth::guard('admins')->logout();
         $request->session()->invalidate();
-        return redirect()->route('admin.login');
+        return redirect()->route('front.index');
     }
     public function changePasswordView()
     {

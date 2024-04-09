@@ -19,8 +19,6 @@ use App\Http\Controllers\dashboard\ReservationController;
 |
 */
 
-Route::get('/admin/login', [AdminController::class, 'loginView']);
-Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login');
 
 // Admin Authentication
 Route::middleware('checkAdmin')->group(function () {

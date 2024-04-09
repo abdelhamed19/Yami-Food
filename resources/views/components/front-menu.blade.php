@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                 <div class="heading-title text-center">
                     <h2>Special Menu</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                    <p>Here Are some items form diffrent categories</p>
                 </div>
             </div>
         </div>

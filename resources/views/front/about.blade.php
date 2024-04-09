@@ -1,5 +1,5 @@
 	<!-- Start header -->
-    <x-front-header />
+    <x-front-header title="about" />
     	<!-- End header -->
 
 	<!-- Start header -->

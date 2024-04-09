@@ -1,5 +1,5 @@
 	<!-- Start header -->
-    <x-front-header />
+    <x-front-header title="menu" />
     <br>
     <div class="menu-box">
         <div class="container">

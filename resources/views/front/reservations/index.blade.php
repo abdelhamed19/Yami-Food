@@ -1,5 +1,5 @@
 	<!-- Start header -->
-    <x-front-header />
+    <x-front-header title="Your Reservation" />
     <br>
     <div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
@@ -69,7 +69,7 @@
 											<div class="help-block with-errors"></div>
 										</div>
 									</div>
-                                    
+
 									<div class="col-md-12">
 										<div class="form-group">
 											<input type="text" readonly  placeholder="Your Numbar" id="phone" class="form-control" value="{{ $reservation->notes }}" required data-error="Please enter your Numbar">
@@ -111,8 +111,13 @@
                                 @endif
                                 @empty
                                 <div class="col-md-12">
-                                    <h3>No Reservations yet</h3>
-							</div>
+                                    <div class="submit-button text-center">
+                                        <h1 class="text-center">No reservations found</h1>
+                                        <a href="{{ route('reservations.create') }}" class="btn btn-common" id="submit">Create One</a>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+
+                                    </div>
+                                </div>
 
                             @endforelse
 
