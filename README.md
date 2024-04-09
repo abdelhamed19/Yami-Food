@@ -2,7 +2,7 @@
 
 YamiFood is a comprehensive restaurant management system developed using Laravel Blade, designed to streamline operations for restaurant owners and staff. This repository contains the source code for the YamiFood project, offering a centralized platform for managing reservations, orders, and providing insights through a user-friendly dashboard.
 
-Key Features:
+## Key Features:
 
 Dashboard: The intuitive dashboard provides restaurant administrators with real-time insights into key metrics such as sales, reservations, and order status. Visualizations and data summaries empower decision-making and performance analysis.
 
