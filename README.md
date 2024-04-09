@@ -4,7 +4,7 @@ YamiFood is a comprehensive restaurant management system developed using Laravel
 
 ## Key Features:
 
-Dashboard: The intuitive dashboard provides restaurant administrators with real-time insights into key metrics such as sales, reservations, and order status. Visualizations and data summaries empower decision-making and performance analysis.
+### Dashboard: The intuitive dashboard provides restaurant administrators with real-time insights into key metrics such as sales, reservations, and order status. Visualizations and data summaries empower decision-making and performance analysis.
 
 Reservations Management: YamiFood enables seamless management of reservations, allowing customers to book tables online. Restaurant staff can view, modify, and confirm reservations, ensuring efficient allocation of resources and optimal customer service.
 
