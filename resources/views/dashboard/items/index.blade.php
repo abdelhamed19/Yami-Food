@@ -17,7 +17,8 @@
                     <x-success-message />
                     <h1 class="card-title">Items</h1>
                     <a href="{{ route('dashboard.items.create') }}" class="btn btn-outline-primary btn-fw">Add item</a>
-                    <a href="{{ route('dashboard.items.trashed') }}" class="btn btn-outline-secondary btn-fw">Trashed Items</a>
+                    <a href="{{ route('dashboard.items.trashed') }}" class="btn btn-outline-secondary btn-fw">Trashed
+                        Items</a>
                     <div class="table-responsive">
                         <hr>
                         <table class="table table-bordered">
@@ -35,18 +36,22 @@
                                 @forelse ($items as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td><a href="{{ route('dashboard.items.show',$item->id) }}"> {{ $item->name }} </a></td>
+                                        <td><a href="{{ route('dashboard.items.show', $item->id) }}"> {{ $item->name }}
+                                            </a></td>
                                         <td> {{ $item->status }} </td>
                                         <td> {{ $item->category->name }} </td>
                                         <td>
-                                            <a href="{{ route('dashboard.items.edit',$item->id) }}" class="btn btn-outline-warning btn-fw">Edit</a>
+                                            <a href="{{ route('dashboard.items.edit', $item->id) }}"
+                                                class="btn btn-outline-warning btn-fw">Edit</a>
 
                                         </td>
                                         <td>
-                                            <form action="{{ route('dashboard.items.destroy',$item->id) }}" method="POST">
+                                            <form action="{{ route('dashboard.items.destroy', $item->id) }}"
+                                                method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-outline-danger btn-fw">Delete</button>
+                                                <button type="submit"
+                                                    class="btn btn-outline-danger btn-fw">Delete</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -57,18 +62,19 @@
                                 @endforelse
                             </tbody>
                         </table>
-                    <br>
-                        @php
+                        <br>
+                    </div>
+                    @php
                         $currentPage = $items->currentPage();
                         $lastPage = $items->lastPage();
                     @endphp
 
                     @for ($i = 1; $i <= $lastPage; $i++)
-                        <a href="{{ request()->url() }}?page={{ $i }}" class="btn btn-outline-primary btn-fw{{ $currentPage == $i ? ' active' : '' }}">Page #{{ $i }}</a>
+                        <a href="{{ request()->url() }}?page={{ $i }}"
+                            class="btn btn-outline-primary btn-fw{{ $currentPage == $i ? ' active' : '' }}">Page
+                            #{{ $i }}</a>
                     @endfor
-                    </div>
                 </div>
             </div>
         </div>
-
-
+    </div>

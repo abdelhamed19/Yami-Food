@@ -29,8 +29,8 @@
 							<div class="row">
                                 @forelse ($reservations as $reservation)
 								<div class="col-md-6">
-                                    <form action="{{ route('reservations.destroy',$reservation->id) }}" method="POST">
-                                        <a class="btn btn-outline-warning btn-fw" style="height: 40px" href="{{ route('reservations.edit', $reservation->id) }}">Edit</a>
+                                    <form action="{{ route('reservation.destroy',$reservation->id) }}" method="POST">
+                                        <a class="btn btn-outline-warning btn-fw" style="height: 40px" href="{{ route('reservation.edit', $reservation->id) }}">Edit</a>
                                         @csrf
                                         @method('DELETE')
                                         <input type="submit" class="btn btn-outline-danger btn-fw" style="height: 40px" value="Delete" onclick="return confirm('Are you sure you want to delete this item?');"></form>
@@ -113,7 +113,7 @@
                                 <div class="col-md-12">
                                     <div class="submit-button text-center">
                                         <h1 class="text-center">No reservations found</h1>
-                                        <a href="{{ route('reservations.create') }}" class="btn btn-common" id="submit">Create One</a>
+                                        <a href="{{ route('reservation.create') }}" class="btn btn-common" id="submit">Create One</a>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
 
                                     </div>

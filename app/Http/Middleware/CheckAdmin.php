@@ -20,7 +20,7 @@ class CheckAdmin
             abort(401);
         }
         if (!auth()->guard('admins')->check() ) {
-            return redirect()->route('admin.login');
+            return redirect()->route('login');
         }
         return $next($request);
     }

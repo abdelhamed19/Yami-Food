@@ -36,7 +36,12 @@
                             <img src={{ $item->image_url }} width="270px" height="270px" alt="Image">
                             {{-- class="img-fluid" --}}
                             <div class="why-text">
-                                <h4>{{ $item->name }}</h4>
+                                <h4>{{ $item->name }} </h4>
+                                <form action="{{ route('order.addItem') }}" method="Post">
+                                    @csrf
+                                    <input type="hidden" name="item_id" value="{{ $item->id }}">
+                                    <button type="submit" class="button-group" style="background-color: rgb(207, 166, 113); color:black; font-size:14px font-weight:600">Add to Menu</button>
+                                </form>
                                 <p>{{ strlen($item->description) > 100 ? substr($item->description, 0, 100) . '...' : $item->description }}</p>
                                 <h5> ${{ $item->price }}</h5>
                             </div>

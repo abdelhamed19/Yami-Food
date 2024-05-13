@@ -24,7 +24,7 @@
          <div class="row">
              <div class="col-lg-12 col-sm-12 col-xs-12">
                  <div class="contact-block">
-                     <form action="{{ route('reservations.update', $reservation->id) }}" method="POST">
+                     <form action="{{ route('reservation.update', $reservation->id) }}" method="POST">
                          @csrf
                          @method('PUT')
                          <div class="row">

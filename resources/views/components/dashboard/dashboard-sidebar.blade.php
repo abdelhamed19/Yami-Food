@@ -23,7 +23,7 @@
                 <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list"
                     aria-labelledby="profile-dropdown">
 
-                    <a href="#" class="dropdown-item preview-item">
+                    <a href="{{ route('admin.profile') }}" class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
                             <div class="preview-icon bg-dark rounded-circle">
                                 <i class="mdi mdi-settings text-primary"></i>
@@ -36,7 +36,7 @@
 
                     <div class="dropdown-divider"></div>
 
-                    <a href="#" class="dropdown-item preview-item">
+                    <a href="{{ route('admin.change-password') }}" class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
                             <div class="preview-icon bg-dark rounded-circle">
                                 <i class="mdi mdi-onepassword  text-info"></i>
@@ -98,14 +98,14 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-laptop"></i>
                 </span>
-                <span class="menu-title">Reservations - Tables</span>
+                <span class="menu-title">Reservations - Clients</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link"
                         href="{{ route('dashboard.reservations.index') }}">Reserved Tables</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Tables</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('dashboard.clients') }}">Clients</a></li>
                 </ul>
             </div>
         </li>
@@ -124,6 +124,23 @@
                     <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Online</a></li>
                     <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Onsite</a>
                     </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-icon">
+                    <i class="mdi mdi-laptop"></i>
+                </span>
+                <span class="menu-title">Roles</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('dashboard.items.index') }}">Items</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link"
+                            href="{{ route('dashboard.categories.index') }}">Categories</a></li>
                 </ul>
             </div>
         </li>

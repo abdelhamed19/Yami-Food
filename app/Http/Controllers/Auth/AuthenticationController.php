@@ -29,7 +29,7 @@ class AuthenticationController extends Controller
         }
         if (Auth::guard('admins')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect('/dashboard');
+            return redirect()->route("dashboard");
         }
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',

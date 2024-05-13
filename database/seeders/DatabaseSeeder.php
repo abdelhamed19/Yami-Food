@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => Hash::make(123456789),
         ]);
-        $this->call(CategorySeeder::class);
+        //$this->call(CategorySeeder::class);
         //Item::factory(50)->create();
     }
 }

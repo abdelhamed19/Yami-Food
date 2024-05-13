@@ -53,9 +53,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Reservation & Orders</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                            <a class="dropdown-item" href="{{ route('reservations.create') }}">Reserve a Table</a>
-                            <a class="dropdown-item" href="{{ route('reservations.index') }}">Your Reservation</a>
-                            <a class="dropdown-item" href="stuff.html">Order Now</a>
+                            <a class="dropdown-item" href="{{ route('reservation.create') }}">Reserve a Table</a>
+                            <a class="dropdown-item" href="{{ route('reservation.index') }}">Your Reservation</a>
+                            <a class="dropdown-item" href="{{ route('order.index') }}">Orders</a>
+
                         </div>
                     </li>
                     <form action="{{ route('logout') }}" method="POST">
@@ -69,10 +70,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link @if(URL::current() ==url('/reservation')) active @endif dropdown-toggle  "  href="#"  data-toggle="dropdown">Reservation & Orders</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                            <a class="dropdown-item" href="{{ route('reservations.create') }}">Reserve a Table</a>
-                            <a class="dropdown-item" href="{{ route('reservations.index') }}">Your Reservation</a>
+                            <a class="dropdown-item" href="{{ route('reservation.create') }}">Reserve a Table</a>
+                            <a class="dropdown-item" href="{{ route('reservation.index') }}">Your Reservation</a>
 
-                            <a class="dropdown-item" href="stuff.html">Order Now</a>
+                            <a class="dropdown-item" href="{{ route('order.index') }}">Orders</a>
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>

@@ -26,7 +26,7 @@ class UpdateItem extends FormRequest
             "description" => "sometimes|string|max:255",
             "price" => "sometimes|numeric",
             "category_id" => "sometimes|exists:categories,id",
-            "status" => "required|in:active,drafted",
+            "status" => "sometimes|in:active,drafted",
             "img" => "nullable|image",
         ];
     }

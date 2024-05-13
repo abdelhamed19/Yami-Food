@@ -38,14 +38,19 @@ class AdminController extends Controller
     public function changePassword(Request $request)
     {
         $request->validate([
-            'old_password' => 'required',
+            'current_password' => 'required',
             'password' => 'required|confirmed'
         ]);
-        if (Auth::guard('admins')->attempt($request->only('email', 'old_password'))) {
-            $request->user()->password = Hash::make($request->password);
-            $request->user()->save();
-            return back()->with('status', 'Password changed successfully');
+
+        $user = Auth::guard('admins')->user();
+
+        if (Hash::check($request->current_password, $user->password)) {
+            $user->update([
+                'password' => Hash::make($request->password)
+            ]);
+            return redirect('/dashboard')->with('success', 'Password changed successfully');
         }
+
         return back()->with('status', 'Invalid password');
     }
 }

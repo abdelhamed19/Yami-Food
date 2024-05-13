@@ -4,7 +4,6 @@ namespace App\Http\Controllers\dashboard;
 
 use App\Models\Category;
 use App\Helpers\UploadImage;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\dashboard\StoreCategory;
